@@ -1,0 +1,167 @@
+{
+  "id": "f52e1ac6-f42a-4294-9d2c-2e61e73991b7",
+  "version": "2.0",
+  "name": "Rik äriregistri testimine",
+  "url": "https://ariregister.rik.ee",
+  "tests": [{
+    "id": "be7d9a15-474c-4455-9203-c7ed6d32398f",
+    "name": "Ostukorvist toote eemaldamine",
+    "commands": [{
+      "id": "efb7be8d-03b3-42f6-9ced-c942c5a84383",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6056162b-e50c-408e-8945-9879b8bd638f",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "974x1047",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a4a8ce77-8a25-4d61-bd12-0e67deddec6c",
+      "comment": "",
+      "command": "click",
+      "target": "css=a > img",
+      "targets": [
+        ["css=a > img", "css:finder"],
+        ["xpath=//img[@alt=\"#(tls_cart_cart_has_one_product')#\"]", "xpath:img"],
+        ["xpath=//a/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ffdc9ae9-8f43-43ee-b185-000b475ab466",
+      "comment": "",
+      "command": "click",
+      "target": "name=remove_product",
+      "targets": [
+        ["name=remove_product", "name"],
+        ["css=.delete", "css:finder"],
+        ["xpath=//input[@name='remove_product']", "xpath:attributes"],
+        ["xpath=//td[4]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "37d8dd07-af81-4fcb-9e79-8582a62481cf",
+      "comment": "",
+      "command": "assert",
+      "target": "css=.main_container",
+      "targets": [],
+      "value": "Ostukorv on tühi."
+    }]
+  }, {
+    "id": "bb2d100f-ed2a-4fc5-89f6-eb127cc79e6c",
+    "name": "Ostukorvi lisamine",
+    "commands": [{
+      "id": "a555205f-3fd2-4b6e-b98d-25e05a6edc76",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bdcc999e-8f60-4c1a-be27-2e717384feb0",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "974x1047",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bb4b827d-994e-48c7-b0d2-bf79f704ee50",
+      "comment": "",
+      "command": "click",
+      "target": "id=search_field2",
+      "targets": [
+        ["id=search_field2", "id"],
+        ["name=nimi", "name"],
+        ["css=#search_field2", "css:finder"],
+        ["xpath=//input[@id='search_field2']", "xpath:attributes"],
+        ["xpath=//form/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4f8855f2-9fc5-4b82-a68a-5c8c7689798e",
+      "comment": "",
+      "command": "type",
+      "target": "id=search_field2",
+      "targets": [
+        ["id=search_field2", "id"],
+        ["name=nimi", "name"],
+        ["css=#search_field2", "css:finder"],
+        ["xpath=//input[@id='search_field2']", "xpath:attributes"],
+        ["xpath=//form/div/input", "xpath:position"]
+      ],
+      "value": "M.V.WOOL"
+    }, {
+      "id": "3e8b61f1-2922-45c4-909e-265fe0c2cd2f",
+      "comment": "",
+      "command": "click",
+      "target": "name=sub",
+      "targets": [
+        ["name=sub", "name"],
+        ["css=div:nth-child(3) > .submit", "css:finder"],
+        ["xpath=//input[@name='sub']", "xpath:attributes"],
+        ["xpath=//form/div/input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c1bef308-e953-421d-ad2f-18703b992c0d",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Aktsiaselts M.V.WOOL",
+      "targets": [
+        ["linkText=Aktsiaselts M.V.WOOL", "linkText"],
+        ["css=.td_v > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Aktsiaselts M.V.WOOL')]", "xpath:link"],
+        ["xpath=//a[contains(@href, \"javascript: navigate2('/ettevotja', '2000088548')\")]", "xpath:href"],
+        ["xpath=//tr[2]/td[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Aktsiaselts M.V.WOOL')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "257b4c27-41f1-4b28-af05-5de244ebc71d",
+      "comment": "",
+      "command": "click",
+      "target": "css=tr:nth-child(3) > td:nth-child(3) img",
+      "targets": [
+        ["css=tr:nth-child(3) > td:nth-child(3) img", "css:finder"],
+        ["xpath=//form[@id='form_fy']/div/table/tbody/tr[3]/td[3]/a/img", "xpath:idRelative"],
+        ["xpath=//tr[3]/td[3]/a/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "74c4fb36-0f84-45c3-a822-26d4963069fb",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ostukorv_nupp img",
+      "targets": [
+        ["css=.ostukorv_nupp img", "css:finder"],
+        ["xpath=//a/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8ef11113-a475-4f18-9cdf-7f1c51f6829e",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=b",
+      "targets": [
+        ["css=b", "css:finder"],
+        ["xpath=//b", "xpath:position"],
+        ["xpath=//b[contains(.,'Ostukorvis on 1 toode.')]", "xpath:innerText"]
+      ],
+      "value": "Ostukorvis on 1 toode."
+    }]
+  }],
+  "suites": [{
+    "id": "d7a3ad90-500e-4d3e-9299-3c0012b0fa69",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["be7d9a15-474c-4455-9203-c7ed6d32398f"]
+  }],
+  "urls": ["https://ariregister.rik.ee/"],
+  "plugins": []
+}
